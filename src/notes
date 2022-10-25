@@ -1,0 +1,14 @@
+Definição de Objeto:
+-Coisa material ou abstrata que pode ser percebida pelos sentidos e descrita por meio de suas caracteristicas, comportamentos e estado atual.
+
+->Uma classe tem que responder a 3 perguntas:
+-Coisas que eu tenho? Caracteristicas-Atributos
+
+-Coisas que eu faço? Metodos-funções-comportamentos
+
+-Como eu estou agora? Estado
+------------------------------------------------------------------------------------------------
+transformar uma classe em objeto = instanciar
+eu gero um objeto a partir de uma classe
+->Definição classe(molde):
+--Define os atributos e métodos comuns que serão compartilhados por um objeto
