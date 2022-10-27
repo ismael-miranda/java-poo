@@ -12,3 +12,41 @@ transformar uma classe em objeto = instanciar
 eu gero um objeto a partir de uma classe
 ->Definição classe(molde):
 --Define os atributos e métodos comuns que serão compartilhados por um objeto
+------------------------------------------------------------------------------------------------
+
+->MODIFICADORES DE VISIVILIDADE(modificadores de acesso)
+-->Indicam o nivel de acesso aos componentes internos(atributos e metodos) de uma classe
+--->Simbolos dos Modificadores de Visibilidade:
+----> + = publico: tem acesso a classe atual e todas as outras classes
+      - = privado: somente a classe atual tem acesso
+      # = protegido: a classe atual e todas as sub-classes
+----------------------------------------------------------------------------------------------
+
+Classe ContaBanco
+-Atributos
+--> + numConta
+--> # tipo (conta-correta=cc ou conta-poupanca=cp)
+--> - dono
+--> - saldo
+--> - status
+
+-Metodos
+--Criar os metodos e os metodos modificadores (Getters and Setters)
+--> + abrirConta()
+        *Quando abrir a conta, mudar o status para true
+        *Informar se a conta sera cc(ganha R$50.00) ou cp(ganha R$150.00)
+--> + fecharConta()
+        *Nao pode ter saldo em conta(precisa sacar) nem debito(precisa depositar)
+--> + depositar()
+        *Validar se a conta esta aberta(status=true)
+--> + sacar()
+        *Verificar se a conta esta aberta(status=true)
+        *Saldo tem que ser maior que o valor a ser sacado
+--> + pagarMensal()
+        *Quando o metodo for chamado, verificar se a conta eh cc
+        *descontar R$12.00 do saldo da conta corrente
+        *descontar R$20.00 do saldo da conta poupanca
+
+Criar o metodo construtor.
+-Sempre que uma conta dor criado, seu status será inicializado como false
+-Saldo como R$0.00
