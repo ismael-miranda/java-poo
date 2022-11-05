@@ -66,6 +66,7 @@ public class ContaBanco {
             System.out.print("Seu saldo esta negativo " + this.saldo);
             System.out.println("Favor realizar um deposito");
         }else{
+            this.status = false;
             System.out.println("Conta encerrada");
         }
     }
@@ -77,16 +78,27 @@ public class ContaBanco {
     }
 
     public void sacar(float valor){
-        if(this.status == true){
-            this.saldo -= valor;
+        if(this.status){
+            if(this.saldo > 0){
+                this.saldo -= valor;
+                System.out.println("Saque realizado");
+            }else{
+                System.out.println("Sem saldo");
+            }
+        }else{
+            System.out.println("Conta esta desabilitada");
         }
     }
 
     public void pagarMensal(String tipoDeConta){
-        if(this.tipoConta == tipoDeConta){
-            this.saldo -= 12f;
+        if(this.saldo > 0) {
+            if (this.tipoConta == tipoDeConta) {
+                this.saldo -= 12f;
+            } else if (this.tipoConta == tipoDeConta){
+                this.saldo -= 20f;
+            }
         }else{
-            this.saldo -= 20f;
+            System.out.println("Sem saldo para pagar mensalidade");
         }
     }
 
